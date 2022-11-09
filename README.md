@@ -1,8 +1,8 @@
 # pbp-flutter-lab - counter_7
-# Tugas 7
-# Muhammad Rizqy Ramadhan
-# 2106632182
-# PBP F
+Tugas 7
+Muhammad Rizqy Ramadhan
+2106632182
+PBP F
 
 ## 1. Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
 Stateless widget merupakan suatu widget yang tidak pernah berubah atau bersifat immutable, termasuk properti dan tampilannya. Statetless widget adalah subclass dari StatelessWidget dan tidak dependen terhadap data yang berubah dan perilaku app. Contoh widget-widget Stateless Widget adalah Icon, IconButton, dan Text.
@@ -19,17 +19,17 @@ Di sisi lain, stateful widget adalah widget yang dapat berubah saat aplikasi dij
 
 - AppBar: Widget yang bermanfaat untuk mengatur child widget pada aplikasi. MyAppBar akan membuat widget Container dengan tinggi 56 device-independent pixels dan internal padding 8 pixels. Di dalam Container tersebut, widget menggunakan Row layout. Fungsi AppBar berguna dalam pembuatan title, toolbar, button, dan lain-lain.
 
--Text: Widget yang berguna sebagai penampilan text pada aplikasi.
+- Text: Widget yang berguna sebagai penampilan text pada aplikasi.
 
--Scaffold: Widget yang berfungsi untuk implementasi basic Material Design visual layout structure.
+- Scaffold: Widget yang berfungsi untuk implementasi basic Material Design visual layout structure.
 
--Center: Widget yang berfungsi untuk menaruh child di centre (tengah-tengah). 
+- Center: Widget yang berfungsi untuk menaruh child di centre (tengah-tengah). 
 
--Column: Widget flex yang mengatur layout dalam direksi vertikal (Kolom).
+- Column: Widget flex yang mengatur layout dalam direksi vertikal (Kolom).
 
--Row: Widget flex yang mengatur layout dalam direksi horizontal (Row).
+- Row: Widget flex yang mengatur layout dalam direksi horizontal (Row).
 
--FloatingActionButton: Sebuah widget button (tombol) lingkaran yang _hover_ atau "mengambang"
+- FloatingActionButton: Sebuah widget button (tombol) lingkaran yang _hover_ atau "mengambang"
 
 
 
