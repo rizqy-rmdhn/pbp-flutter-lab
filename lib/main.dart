@@ -49,6 +49,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  bool _isDecrementAvailable = false;
 
   void _incrementCounter() {
     setState(() {
@@ -58,6 +59,10 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       _counter++;
+
+      if (!_isDecrementAvailable) {
+        _isDecrementAvailable = true;
+      }
     });
   }
 
@@ -68,8 +73,15 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      if (_counter > 0) {
-      _counter--;
+      if (_counter > 1) {
+        _counter--;
+      }
+      else if (_counter == 1) {
+        _counter--;
+        _isDecrementAvailable = false;
+      }
+      else {
+        _counter = _counter;
       }
     });
   }
@@ -134,12 +146,14 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: const EdgeInsets.all(8.0),
         child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          FloatingActionButton(
-            onPressed: _decrementCounter,
-            tooltip: 'Decrement',
-            child: const Icon(Icons.remove),
-          ),
+        children: <Widget>[Visibility(
+          visible: _isDecrementAvailable,
+          child: FloatingActionButton(
+                onPressed: _decrementCounter,
+                tooltip: 'Decrement',
+                child: const Icon(Icons.remove),
+              ),
+        ),
           FloatingActionButton(
             onPressed: _incrementCounter,
             tooltip: 'Increment',
