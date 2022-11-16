@@ -1,9 +1,9 @@
 # pbp-flutter-lab - counter_7
-Tugas 7
+Tugas 7 dan Tugas 8
 Muhammad Rizqy Ramadhan
 2106632182
 PBP F
-
+# Tugas 7
 ## 1. Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
 Stateless widget merupakan suatu widget yang tidak pernah berubah atau bersifat immutable, termasuk properti dan tampilannya. Statetless widget adalah subclass dari StatelessWidget dan tidak dependen terhadap data yang berubah dan perilaku app. Contoh widget-widget Stateless Widget adalah Icon, IconButton, dan Text.
 
@@ -119,3 +119,34 @@ floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
             ),
           ],
 ```
+
+# Tugas 8
+## 1. Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement
+Navigator dalam Flutter menyerupai struktur data Stack. Navigator.push() berguna untuk mengganti ke _route_ baru. Metode tersebut akan membuat Route ke dalam Stack (_push_) berisikan Route yang diatur oleh Navigator. Navigator.pushReplacement() juga berguna untuk mengganti route. Tetapi, metode ini akan melakukan _push_ ke dalam Stack, kemudian membuang (_dispose_) route sebelumnya setelah _route_ baru selesai melakukan animasi.
+
+## 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+Widget yang saya pakai pada Tugas 7 seperti pada jawaban Tugas nomor 2, saya gunakan lagi pada Tugas 8. Akan tetapi, pada Tugas 8, saya menggunakan beberapa Widget lain untuk mendukung Tugas 8. Widget-widget tersebut diantaranya.
+- Drawer: Widget ini bermanfaat untuk menu navigasi antara halaman pada aplikasi
+- SizedBox: Widget ini bermanfaat sebagai box dengan ukuran untuk menampun widget lain dan memberikan jarak.
+- ListView: Widget ini berguna untuk penampilan widget lain ketika melakukan _scroll_
+- ListTile: Widget ini berguna untuk menampilkan detail dari children terhadap ListView
+- 
+## 3. Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+Contoh widget yang dapat menerapkan event-event berikut umumnya adalah Button, InkWell, dan GestureDetector
+- onPressed: Event ketika suatu widget diklik, maka kode dalam attribute onPressed akan dieksekusi. Umumnya hanya untuk widget Button.
+- onTap: Sama seperti onPressed, onTap adalah event ketika suatu widget diklik. Ketika widget diklik, maka kode dalam attribute onTap akan dijalankan. Umumnya hanya untuk widget InkWell atau GestureDetector.
+-  onHover: Event ketika suatu widget di-_hover_ (pointer berada di atas widget, tetapi tidak diklik). Kode dalam attribute onHover akan dieksekusi, jika event ini terjadi.
+-  onSaved: Event ketika nilai final form disimpan dengan FormState.save. Kode dalam attribute onSaved akan dieksekusi ketika event ini berjalan.
+-  onChanged: Event ketika input pada TextField berubah karena pengguna melakukan insert atau delete. Kode dalam attribute onChanged akan dieksekusi ketika event ini berjalan.
+-  onFocusChange: Event ketika fokus berubah. Kode dalam attribute onFocusChange akan dieksekusi ketika event ini berjalan.
+
+## 4. Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+Cara kerja Navigator menyerupai struktur data Stack. Kemudian, halaman-halaman pada aplikasi Flutter disebut sebagai _route_. Ketika kita berada di suatu halaman, maka halaman itu sudah berada pada Navigator. Ketika kita ingin mengganti ke halaman lain, maka Navigator akan melakukan _push_ halaman tersebut ke dalam Navigator. Kemudian, ketika kita ingin kembali ke halaman awal atau _back_, maka Navigator akan melakukan _pop_ halaman yang sekarang dan kembali pada halaman sebelumnya.
+
+## 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+a. Penambahan variabel pada main.dart untuk menampung fungsi penambahan budget dan list budget
+b. Implementasi drawer pada file terpisah (budgetDrawer.dart) untuk halaman utama (counter_7), halaman form untuk penambahan budget, halaman untuk menampilkan budget
+c. Pembuatan halaman form, yaitu addBudget.dart
+d. Penambahan widget-widget untuk melakukan input judul (String), nominal (Integer), jenis budget (Dropdown), dan tanggal (Date).
+e. Penambahan button untuk menyimpan input budget yang ditambahkan.
+f. Penambahan halaman untuk menampilkan data budget, yaitu showBudget.dart
