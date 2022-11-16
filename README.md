@@ -130,7 +130,7 @@ Widget yang saya pakai pada Tugas 7 seperti pada jawaban Tugas nomor 2, saya gun
 - SizedBox: Widget ini bermanfaat sebagai box dengan ukuran untuk menampun widget lain dan memberikan jarak.
 - ListView: Widget ini berguna untuk penampilan widget lain ketika melakukan _scroll_
 - ListTile: Widget ini berguna untuk menampilkan detail dari children terhadap ListView
-- 
+
 ## 3. Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
 Contoh widget yang dapat menerapkan event-event berikut umumnya adalah Button, InkWell, dan GestureDetector
 - onPressed: Event ketika suatu widget diklik, maka kode dalam attribute onPressed akan dieksekusi. Umumnya hanya untuk widget Button.
@@ -145,8 +145,13 @@ Cara kerja Navigator menyerupai struktur data Stack. Kemudian, halaman-halaman p
 
 ## 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 a. Penambahan variabel pada main.dart untuk menampung fungsi penambahan budget dan list budget
+
 b. Implementasi drawer pada file terpisah (budgetDrawer.dart) untuk halaman utama (counter_7), halaman form untuk penambahan budget, halaman untuk menampilkan budget
+
 c. Pembuatan halaman form, yaitu addBudget.dart
-d. Penambahan widget-widget untuk melakukan input judul (String), nominal (Integer), jenis budget (Dropdown), dan tanggal (Date).
-e. Penambahan button untuk menyimpan input budget yang ditambahkan.
+
+d. Penambahan widget-widget untuk melakukan input judul (String), nominal (Integer), jenis budget (Dropdown), dan tanggal (Date)
+
+e. Penambahan button untuk menyimpan input budget yang ditambahkan
+
 f. Penambahan halaman untuk menampilkan data budget, yaitu showBudget.dart
