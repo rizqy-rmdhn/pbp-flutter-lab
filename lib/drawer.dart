@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:pbp_flutter_lab/main.dart';
-import 'package:pbp_flutter_lab/addBudget.dart';
-import 'package:pbp_flutter_lab/showBudget.dart';
+import 'package:pbp_flutter_lab/page/addBudget.dart';
+import 'package:pbp_flutter_lab/page/showBudget.dart';
+import 'package:pbp_flutter_lab/page/showMywatchlist.dart';
 
-class BudgetDrawer extends StatefulWidget {
-  const BudgetDrawer({super.key, required this.listBudget, required this.addBudget});
+class MyDrawer extends StatefulWidget {
+  const MyDrawer({super.key, required this.listBudget, required this.addBudget});
   final List<Budget> listBudget;
   final Function(Budget) addBudget;
 
   @override
-  _BudgetDrawerState createState() => _BudgetDrawerState();
+  _MyDrawerState createState() => _MyDrawerState();
 }
 
-class _BudgetDrawerState extends State<BudgetDrawer> {
+class _MyDrawerState extends State<MyDrawer> {
   @override
   void initState() {
     super.initState();
@@ -20,9 +21,10 @@ class _BudgetDrawerState extends State<BudgetDrawer> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Drawer(
-        child: Column(
+    return SafeArea(
+      child: Container(
+        child: Drawer(
+          child: Column(
           children: [
             // Menambahkan clickable menu
             ListTile(
@@ -67,9 +69,24 @@ class _BudgetDrawerState extends State<BudgetDrawer> {
                 );
               },
             ),
+                        ListTile(
+              title: const Text('My Watch List'),
+              onTap: () {
+                // Route menu ke halaman form
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => MywatchlistPage(
+                            listBudget: widget.listBudget,
+                            addBudget: widget.addBudget,
+                          )),
+                );
+              },
+            ),
           ],
         ),
       ),
-    );
+    )
+  );
   }
 }

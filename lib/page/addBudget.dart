@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
-import 'package:pbp_flutter_lab/budgetDrawer.dart';
+import 'package:pbp_flutter_lab/drawer.dart';
 import 'package:pbp_flutter_lab/main.dart';
 
 class AddBudgetPage extends StatefulWidget {
@@ -28,7 +28,7 @@ class _AddBudgetPageState extends State<AddBudgetPage> {
             appBar: AppBar(
                 title: Text('Add Budget'),
             ),
-            drawer: BudgetDrawer(
+            drawer: MyDrawer(
               listBudget: widget.listBudget,
               addBudget: widget.addBudget,
             ),

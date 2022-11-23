@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pbp_flutter_lab/budgetDrawer.dart';
+import 'package:pbp_flutter_lab/drawer.dart';
 import 'package:pbp_flutter_lab/main.dart';
 
 class ShowBudgetPage extends StatefulWidget {
@@ -20,7 +20,7 @@ class _ShowBudgetPageState extends State<ShowBudgetPage> {
       ),
 
       // Menambahkan drawer menu
-      drawer: BudgetDrawer(
+      drawer: MyDrawer(
         listBudget: widget.listBudget,
         addBudget: widget.addBudget,
       ),

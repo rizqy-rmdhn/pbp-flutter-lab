@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pbp_flutter_lab/addBudget.dart';
-import 'package:pbp_flutter_lab/budgetDrawer.dart';
+import 'package:pbp_flutter_lab/page/addBudget.dart';
+import 'package:pbp_flutter_lab/drawer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -134,7 +134,7 @@ class _MyHomePageState extends State<MyHomePage> {
     title: Text(widget.title),
   ),
   // Menambahkan drawer menu
-  drawer: BudgetDrawer(
+  drawer: MyDrawer(
     listBudget: widget.listBudget,
     addBudget: widget.addBudget,
   ),
