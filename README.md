@@ -155,3 +155,27 @@ d. Penambahan widget-widget untuk melakukan input judul (String), nominal (Integ
 e. Penambahan button untuk menyimpan input budget yang ditambahkan
 
 f. Penambahan halaman untuk menampilkan data budget, yaitu showBudget.dart
+
+# Tugas 9
+## 1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+Kita dapat mengambil data JSON tanpa pembuatan model. Akan tetapi, hal tersebut tidak lebih baik dari pembuatan model sebelum pengambilan data JSON. Dengan model, kita dapat menyimpan data json kita pada attribute model. Selain itu, kita dapat memastikan juga tipe data dari setiap field dari model.
+
+## 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+Selain widget yang dipkai dan dijelaskan di tugas 7 dan tugas 8.
+SafeArea. Berguna untuk memberi padding yang cukup pada childnya untuk mencegah gangguan dari operating system.
+
+## 3. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+
+a. Membuat folder page dan model, semua berkas berupa page yang akan ditampilkan akan ditaruh pada folder page (addBudget dan showBudget)
+
+b. Membuat model Mywatchlist pada berkas mywatchlist.dart pada folder model
+
+c. Membuat halaman yang menampilkan detail tiap Film, yaitu detailMywatchlist
+
+d. Penambahan tombol navigasi pada drawer untuk halaman showMywatchlist
+
+e. Penambahan navigasi dari setiap judul pada showMywatchlist ke detailMywatchlist sesuai Film
+
+f. Penambahan tombol 'back' untuk mengembalikan dari halaman detailMywatchlist ke showMywatchlist
+
